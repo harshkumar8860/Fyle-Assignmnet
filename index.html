@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Tax Calculator</title>
+</head>
+
+<body id="body">
+    <div class="container">
+        <form style="border: 2px gray;" action="" name="form" onsubmit="return false">
+
+            <!-- <h2>Tax Calculator</h2> -->
+
+            <p class="para">
+                <label for="grossIncome">&nbspEnter gross annual income
+                    <span class="tooltip">?
+                        <span class="tooltiptext">Gross annual income is your total salary a year before any
+                            deductions</span>
+                    </span>
+                </label>
+                <input type="text" class="input" id="grossIncome" name="grossIncome" required
+                    placeholder="Enter gross annual income">
+                <span class="tooltip explanationMark">!
+                    <span class=" tooltiptext numbersonly">Please enter numbers only</span>
+                </span>
+            </p>
+
+            <p class="para">
+                <label for="extraIncome">&nbspEnter extra income
+                    <span>?</span>
+                </label>
+                <input type="text" class="input" id="extraIncome" placeholder="Enter extra income from other sources">
+                <span class="tooltip explanationMark">!
+                    <span class=" tooltiptext numbersonly">Please enter numbers only</span>
+                </span>
+            </p>
+
+
+            <p>
+                <label>&nbspEnter age group
+                    <span>?</span>
+                </label>
+                <select id="selectAge" required>
+                    <option value="0">Select Age</option>
+                    <option value="1">&lt; 40</option>
+                    <option value="2">&#8805; 40 & &lt; 60</option>
+                    <option value="3">&#8805; 60</option>
+                </select>
+            </p>
+
+            <p class="para">
+                <label for="applicableDeductions">&nbspEnter total applicable deductions <span>?</span></label>
+                <input type="text" class="input" id="applicableDeductions" placeholder="Add total applicable deductions">
+                <span class="tooltip explanationMark">!
+                    <span class=" tooltiptext numbersonly">Please enter numbers only</span>
+                </span>
+            </p>
+
+            <button class="open" id="Submit">Submit</button>
+        </form>
+    </div>
+
+
+
+    <div class="popup" id="popup">
+        <h2 class="calculated">Your overall income will be</h2>
+        <h5 id="answer"></h5>
+        <h6>after tax deductions</h6>
+
+        <button class="close" id="close" onclick="">Close</button>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
